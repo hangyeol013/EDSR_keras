@@ -6,7 +6,7 @@ A implementation of the original paper ['Enhanced Deep Residual Networks for Sin
 
 
 
-<center><img width = "800" src="https://user-images.githubusercontent.com/58276840/95935196-a628fd80-0e0d-11eb-9549-1bf61f1667a1.png"></center>
+<center><img width = "400" src="https://user-images.githubusercontent.com/58276840/95935196-a628fd80-0e0d-11eb-9549-1bf61f1667a1.png"></center>
 
 
 
