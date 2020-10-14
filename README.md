@@ -2,11 +2,11 @@
 
 
 
-A implementation of the original paper ['Accelerating Image Super-Resolution Using Very Deep Convolutional Networks'](https://cv.snu.ac.kr/research/VDSR/)
+A implementation of the original paper ['Enhanced Deep Residual Networks for Single Image Super-Resolution'](https://arxiv.org/abs/1707.02921)
 
 
 
-<center><img width = "800" src="https://user-images.githubusercontent.com/58276840/95853887-104f8d00-0d91-11eb-9e14-9232047fb0f4.png"></center>
+<center><img width = "800" src="https://user-images.githubusercontent.com/58276840/95935196-a628fd80-0e0d-11eb-9549-1bf61f1667a1.png"></center>
 
 
 
