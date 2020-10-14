@@ -22,10 +22,12 @@ My implementation may have some differences with the original paper:
 
 #### Networks)
 
-- 20 layers where layers except the first and the last are of the same type: 64 filters of ths size 3 x 3 x 64.
-(The first layer and the last layer consists of a single filter of size 3 x 3 x 64)
-- The network takes an interpolated low-resolution image (to the desired size) as input and predicts image details.
+- Input image size: 3 (RGB)
+- kernel size: 3x3
 - Zero-padding for all layers
+- EDSR_baseline) filters: 64, residual blocks: 16
+- EDSR) filters: 256, residual blocks: 32
+- Upsampling: Shuffle (tensorflow depth_to_space)
 
 
 #### Training)
