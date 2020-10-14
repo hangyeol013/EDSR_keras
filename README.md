@@ -30,19 +30,19 @@ My implementation may have some differences with the original paper:
 
 #### Training)
 
-- Loss Function: MSE (Mean Squared Error)
+- Loss Function: MAE (Mean Absolute Error, L1)
 - Optimizer: Adam
-- Learning rate: 0.01 (Decreased by a factor of 10 every 20 epochs) 
-- Batch size: 64
+- Learning rate: 10e-4 (Decreased by half at every 100 epochs) 
+- Batch size: 16
 
 
 #### Dataset)
 
 ##### Training)
-- 291 images (91 images from Yang et al. 200 images from Berkeley Segmentation Dataset) (Training set)
+- DIV2K (800 images) (Training set)
 - Another 20 images from the validation set of the BSD500 dataset (Validation set)
-- Data augmentation (scaling:0.6, 0.8, Rotation: 90, 180, 270, flip: vertical, horizontal): 35 times more images for training
-- Patch size: 41 (Input), 41 (Label)
+- Data augmentation (flip: vertical, horizontal, vertical/horizontal, transpose): 7 times more images for training
+- Patch size: 48 (Input), 48 x scale (Label)
 
 
 ##### Test)
@@ -54,12 +54,19 @@ My implementation may have some differences with the original paper:
 -------------------------------------------------------
 
 You can generate dataset (training sample, test sample) through matlab files in Dataset_Generating directory
-- Excute for data augmentation: `VDSR_data_aug.m`
+- Excute for data augmentation: `EDSR_data_aug.m`
 - Excute for making LR images: `Generate_LR.m`
-- Excute for training sample: `VDSR_generate_train.m`
-- Excute for test sample: `VDSR_generate_test.m`
+- Excute for training sample: `EDSR_generate_train.m`
+- Excute for test sample: `EDSR_generate_test.m`
 
 
 I also uploaded the trained weight files.
 
-With VDSR_main.ipynb file and weight file in 'weight', you can test the network for all scales (x2, x3, x4).
+With EDSR.ipynb file and weight files in 'weight', you can test the network.
+I uploaded EDSR model as well but I couldn't upload the weight files for them because of memory issue.
+Here you can only test the baseline version of EDSR
+(or you can train the EDSR models by yourself and test them)
+
+- Execute for x2 EDSR_baseline: `EDSR_baseline_scale2`, `/weights/EDSR_checkpoint_baseline_scale2.h5`
+- Execute for x3 EDSR_baseline: `EDSR_baseline_scale3`, `/weights/EDSR_checkpoint_baseline_scale3.h5`
+- Execute for x4 EDSR_baseline: `EDSR_baseline_scale4`, `/weights/EDSR_checkpoint_baseline_scale4.h5`
