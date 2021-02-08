@@ -11,6 +11,7 @@ A implementation of the original paper ['Enhanced Deep Residual Networks for Sin
 
 
 tensorflow-gpu 2.0.0, keras 2.3.1 based implementation on Python 3.6.9, using Jupyter Notebook.
+
 (I converted the .ipynb file to .py file)
 
 
